@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Library</h1>
+    </header>
+    <main>
+        <button class="addbookbtn">+ addbook</button>
+        <div class="form active">
+            <label for="title">title : <input type="text" name="title" id="title"></label>
+            <label for="author">autor :<input type="text" name="author" id="author"></label>
+            <label for="nopages">no of pages :<input type="text" name="nopages" id="nopages"></label>
+            <label for="readornot">read yet :<input type="checkbox" name="readstatus" id="readstatus"></label>
+            <div class="btn">
+                <button class="createbook">createbook</button>
+                <button class="return">return</button>
+            </div>
+        </div>
+        <div class="displaybookcontainer"></div>
+    </main>
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
