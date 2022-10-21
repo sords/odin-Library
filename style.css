@@ -16,9 +16,10 @@ body{
 main {
     color: lavender;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    /* gap: 50px; */
 }
 
 /* button  */
@@ -32,13 +33,84 @@ main {
 }
 /* form */
 .form {
+    /* display: none; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform:  translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
     border: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: lavender;
+    width: 500px;
+    max-width: 80%;
+    color: teal;
     display: flex;
     flex-direction: column;
 }
-.active{
-    display: none;
+
+.form.active {
+    transform: translate(-50%,-50%) scale(1);
 }
+
+.form-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.form-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.form-header .close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+
+
+.overlay{
+    /* opacity: 1; */
+    background-color: black;
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    pointer-events: none;
+    background-color: rgb(0, 0, 0,0.5);
+
+
+}
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+/* .active{
+    display: none;
+} */
 /* books display */
 .displaybookcontainer {
     display: grid;
@@ -46,7 +118,6 @@ main {
     /* grid-template-rows: repeat(2, 1fr); */
     /* row-gap: 20px; */
     gap: 10px;
-
 }
 
 

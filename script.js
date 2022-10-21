@@ -6,15 +6,20 @@ let newbook;
 
 let displaybookcontainer = document.querySelector('.displaybookcontainer')
 let form = document.querySelector('.form')
-let popup = document.querySelector('.addbookbtn')
+let overlay = document.querySelector('.overlay')
+let popup = document.querySelectorAll('[data-addbook]')
+let closebtn = document.querySelectorAll('[data-close-button]')
 
 function popupform() {
     form.classList.toggle('active')
+    overlay.classList.toggle('active')
 }
 
 
 
-popup.addEventListener('click', popupform)
+popup.forEach(button => {
+    button.addEventListener('click', popupform)
+})
 
 
 // form popup and book creation

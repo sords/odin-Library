@@ -14,17 +14,25 @@
         <h1>Library</h1>
     </header>
     <main>
-        <button class="addbookbtn">+ addbook</button>
-        <div class="form active">
-            <label for="title">title : <input type="text" name="title" id="title"></label>
-            <label for="author">autor :<input type="text" name="author" id="author"></label>
-            <label for="nopages">no of pages :<input type="text" name="nopages" id="nopages"></label>
-            <label for="readornot">read yet :<input type="checkbox" name="readstatus" id="readstatus"></label>
-            <div class="btn">
-                <button class="createbook">createbook</button>
-                <button class="return">return</button>
+        <button data-addbook = 'addbookbtn' class="addbookbtn">+ addbook</button>
+        <button>heeeleo</button>
+        <div class="form">
+            <div class="form-header">
+                <div class="title">Add a Book</div>
+                <div data-close-button class="close-btn">&times;</div>
+            </div>
+            <div class="form-content">
+                <label for="title"><div>title</div><input type="text" name="title" id="title"></label>
+                <label for="author"><div>author</div><input type="text" name="author" id="author"></label>
+                <label for="nopages"><div>NO of pages</div><input type="text" name="nopages" id="nopages"></label>
+                <label for="readornot">read yet<input type="checkbox" name="readstatus" id="readstatus"></label>
+                <div class="btn">
+                    <button class="createbook">createbook</button>
+                    <button class="return">return</button>
+                </div>
             </div>
         </div>
+        <div class="overlay"></div>
         <div class="displaybookcontainer"></div>
     </main>
     <footer class="footer"></footer>
