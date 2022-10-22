@@ -14,22 +14,23 @@
         <h1>Library</h1>
     </header>
     <main>
-        <button data-addbook = 'addbookbtn' class="addbookbtn">+ addbook</button>
-        <button>heeeleo</button>
+        <button data-addbook='addbookbtn' class="addbookbtn">+ addbook</button>
         <div class="form">
             <div class="form-header">
                 <div class="title">Add a Book</div>
                 <div data-close-button class="close-btn">&times;</div>
             </div>
             <div class="form-content">
-                <label for="title"><div>title</div><input type="text" name="title" id="title"></label>
-                <label for="author"><div>author</div><input type="text" name="author" id="author"></label>
-                <label for="nopages"><div>NO of pages</div><input type="text" name="nopages" id="nopages"></label>
-                <label for="readornot">read yet<input type="checkbox" name="readstatus" id="readstatus"></label>
-                <div class="btn">
-                    <button class="createbook">createbook</button>
-                    <button class="return">return</button>
+                <label for="title"><input type="text" class="text-input" name="title" id="title" placeholder="title" required></label>
+                <label for="author"><input type="text"  class="text-input" name="author" id="author" placeholder="author" required></label>
+                <label for="nopages"><input type="text"  class="text-input" name="nopages" id="nopages" placeholder="pages" required ></label>
+                <div>
+                    <label for="readornot" class="pages">
+                        <div>Have you read it?</div>
+                        <input type="checkbox" name="readstatus" value='checked' id="readstatus">
+                    </label>
                 </div>
+                <button class="createbook">Submit</button>
             </div>
         </div>
         <div class="overlay"></div>
